@@ -33,7 +33,7 @@
     
 }
 body{
-    background-image: url("./imgaes/bg-1.webp");
+    background: url("./imgaes/bg-1.webp");
 }
 .navbar{
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
