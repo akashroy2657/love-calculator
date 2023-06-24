@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="/node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+    <script>
+
+        
+
+        function statusClick(){
+            var male=document.getElementById("male").value;
+            var female=document.getElementById("female").value;
+            var err1=document.getElementById("err");
+            var err2=document.getElementById("err2");
+            var result=document.getElementById("result");
+            var percent=[""];
+
+            if(male=="" || female==""){
+                err.innerHTML="please Enter Your Partner's Name!";
+                result.style.display="none";
+            }else{
+              err.innerHTML="";
+              result.style.display="block";  
+            }
+            
+            var random=Math.floor(Math.random(percent)*100)
+            result.innerHTML=`Love Between ${male} & ${female} is `+random +"%";
+
+
+        }
+        function resetClick(){
+             window.open("index.html");
+        }
+       
+    
+
+    </script>
+</head>
+<body onload="bodyload()">
+    <div class="container-fluid">
+        <div class="navbar text-center  text-white">
+            <p class="font">It will not show the real love between someone, It is a computer generated love friction.. </p>
+        </div>
+        <div class="section ">
+            <div class="out">
+                <dl class="form border border-3 p-4">
+                    <div class="d-flex justify-content-between">
+                        <span class="logo">
+                            <img src="/imgaes/logo.jpg" alt="">
+                        </span>
+                        <button class="btn btn-warning rebtn" onclick="resetClick()">reset</button>
+                    </div>
+                    <div>
+                        <dt class="mt-4">Enter Male Name</dt>
+                    <dd> <input type="text" id="male" class="form-control w-100"></dd>
+                    
+                    <dt class="mt-4">Enter Female Name</dt>
+                    <dd> <input type="text" id="female" class="form-control w-100  "></dd>
+                    
+                    </div>
+                    <div class="text-center mt-4">
+                        <button class="btn btn-danger mt-4 w-100" onclick="statusClick()">Check Status</button>
+                        <p id="err" class="text-warning"></p>
+                    </div>
+                </dl>
+                <div class="text-center box">
+                    <h3>Result Box</h3>
+                </div>
+                <div class="text-center border res">
+                    <p id="result"></p>
+                </div>
+                <div class="text-center">
+                    <p class="text-danger"><b>Copy right, love @Akash</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
